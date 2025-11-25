@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import artwork1 from "@/assets/artwork-1.jpg";
 
 const Gallery = () => {
   // Generate 20 placeholder items
@@ -20,10 +21,20 @@ const Gallery = () => {
               className="group overflow-hidden border-border bg-card hover:bg-gallery-hover transition-all duration-300 cursor-pointer shadow-sm hover:shadow-elegant"
             >
               <div className="aspect-[3/4] bg-muted flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-muted to-accent/30" />
-                <span className="relative text-muted-foreground font-light text-sm">
-                  {artwork.title}
-                </span>
+                {artwork.id === 1 ? (
+                  <img 
+                    src={artwork1} 
+                    alt={artwork.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-br from-muted to-accent/30" />
+                    <span className="relative text-muted-foreground font-light text-sm">
+                      {artwork.title}
+                    </span>
+                  </>
+                )}
               </div>
               <div className="p-4">
                 <h3 className="text-sm font-light text-foreground">
