@@ -13,9 +13,11 @@ const Contact = () => {
           </div>
           <div className="flex flex-col items-center">
             <Phone className="w-8 h-8 mb-4 text-muted-foreground" />
-            <h3 className="font-light mb-2">Telefon</h3>
+            <h3 className="font-light mb-2">Media
+
+          </h3>
             <a href="tel:+49123456789" className="text-muted-foreground hover:text-foreground transition-colors">
-              +49 175 6265087   
+              inst   
             </a>
           </div>
           <div className="flex flex-col items-center">
