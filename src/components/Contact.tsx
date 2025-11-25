@@ -13,12 +13,15 @@ const Contact = () => {
           </div>
           <div className="flex flex-col items-center">
             <Phone className="w-8 h-8 mb-4 text-muted-foreground" />
-            <h3 className="font-light mb-2">Media
-
-          </h3>
-            <a href="tel:+49123456789" className="text-muted-foreground hover:text-foreground transition-colors">
-              inst   
-            </a>
+            <h3 className="font-light mb-2">Social Media</h3>
+            <div className="flex flex-col gap-2 items-center">
+              <a href="https://instagram.com/your_username" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                Instagram
+              </a>
+              <a href="https://tiktok.com/@your_username" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                TikTok
+              </a>
+            </div>
           </div>
           <div className="flex flex-col items-center">
             <Smartphone className="w-8 h-8 mb-4 text-muted-foreground" />
