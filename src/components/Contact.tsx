@@ -1,4 +1,4 @@
-import { Mail, Phone, Smartphone } from "lucide-react";
+import { Mail, Smartphone, Phone } from "lucide-react";
 const Contact = () => {
   return <section id="kontakt" className="py-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -12,22 +12,22 @@ const Contact = () => {
             </a>
           </div>
           <div className="flex flex-col items-center">
-            <Phone className="w-8 h-8 mb-4 text-muted-foreground" />
+            <Smartphone className="w-8 h-8 mb-4 text-muted-foreground" />
             <h3 className="font-light mb-2">Social Media</h3>
             <div className="flex flex-col gap-2 items-center">
-              <a href="https://instagram.com/your_username" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" href="https://instagram.com/nvkv.sf">
                 Instagram
               </a>
-              <a href="https://tiktok.com/@your_username" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" href="https://tiktok.com/@nvkvsf._">
                 TikTok
               </a>
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <Smartphone className="w-8 h-8 mb-4 text-muted-foreground" />
-            <h3 className="font-light mb-2">Standort</h3>
+            <Phone className="w-8 h-8 mb-4 text-muted-foreground" />
+            <h3 className="font-light mb-2">​Telefon</h3>
             <p className="text-muted-foreground">
-              Oberstaufen, Deutschland
+              +49 175 6265087  
             </p>
           </div>
         </div>
