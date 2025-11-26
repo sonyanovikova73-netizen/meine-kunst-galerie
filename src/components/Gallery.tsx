@@ -9,17 +9,23 @@ import artwork7 from "@/assets/artwork-7.jpg";
 import artwork8 from "@/assets/artwork-8.jpg";
 import artwork9 from "@/assets/artwork-9.jpg";
 import artwork10 from "@/assets/artwork-10.jpg";
+import artwork11 from "@/assets/artwork-11.jpg";
+import artwork12 from "@/assets/artwork-12.jpg";
+import artwork13 from "@/assets/artwork-13.jpg";
+import artwork14 from "@/assets/artwork-14.jpg";
+import artwork15 from "@/assets/artwork-15.jpg";
+import artwork16 from "@/assets/artwork-16.jpg";
 
 const Gallery = () => {
-  // Generate 20 placeholder items
-  const artworks = Array.from({ length: 20 }, (_, i) => ({
+  const artworks = Array.from({ length: 16 }, (_, i) => ({
     id: i + 1,
     title: `Kunstwerk ${i + 1}`,
   }));
 
   const artworkImages = [
     artwork1, artwork2, artwork3, artwork4, artwork5,
-    artwork6, artwork7, artwork8, artwork9, artwork10
+    artwork6, artwork7, artwork8, artwork9, artwork10,
+    artwork11, artwork12, artwork13, artwork14, artwork15, artwork16
   ];
 
   return (
@@ -35,20 +41,11 @@ const Gallery = () => {
               className="group overflow-hidden border-border bg-card hover:bg-gallery-hover transition-all duration-300 cursor-pointer shadow-sm hover:shadow-elegant"
             >
               <div className="aspect-[3/4] bg-muted flex items-center justify-center relative overflow-hidden">
-                {artwork.id <= 10 ? (
-                  <img 
-                    src={artworkImages[artwork.id - 1]} 
-                    alt={artwork.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <>
-                    <div className="absolute inset-0 bg-gradient-to-br from-muted to-accent/30" />
-                    <span className="relative text-muted-foreground font-light text-sm">
-                      {artwork.title}
-                    </span>
-                  </>
-                )}
+                <img 
+                  src={artworkImages[artwork.id - 1]} 
+                  alt={artwork.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-4">
                 <h3 className="text-sm font-light text-foreground">
