@@ -33,7 +33,7 @@ const Gallery = () => {
   const [artworks, setArtworks] = useState([
     {
       id: 1,
-      title: 'BOBUR',
+      title: 'hghg',
       description:
         'Bla bla bla. Sonja ist eine schöne Frau. Ich bin ein Mann. Wir sind zusammen. Wir sind glücklich. Wir sind in der Liebe. Ich möchte sie ficken.',
       image: artwork1,
