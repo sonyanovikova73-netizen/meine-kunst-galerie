@@ -1,4 +1,11 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { ZoomIn, ZoomOut } from "lucide-react";
 import artwork1 from "@/assets/artwork-1.jpg";
 import artwork2 from "@/assets/artwork-2.jpg";
 import artwork3 from "@/assets/artwork-3.jpg";
@@ -16,7 +23,9 @@ import artwork14 from "@/assets/artwork-14.jpg";
 import artwork15 from "@/assets/artwork-15.jpg";
 import artwork16 from "@/assets/artwork-16.jpg";
 const Gallery = () => {
-  const artworks = [{
+  const [selectedArtwork, setSelectedArtwork] = useState<number | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [artworks, setArtworks] = useState([{
     id: 1,
     title: "Kunstwerk 1",
     description: "Beschreibung für Kunstwerk 1",
@@ -96,23 +105,106 @@ const Gallery = () => {
     title: "Kunstwerk 16",
     description: "Beschreibung für Kunstwerk 16",
     image: artwork16
-  }];
+  }]);
+
+  const handleArtworkClick = (id: number) => {
+    setSelectedArtwork(id);
+    setZoom(1);
+  };
+
+  const handleClose = () => {
+    setSelectedArtwork(null);
+    setZoom(1);
+  };
+
+  const handleZoomIn = () => {
+    setZoom(prev => Math.min(prev + 0.25, 3));
+  };
+
+  const handleZoomOut = () => {
+    setZoom(prev => Math.max(prev - 0.25, 0.5));
+  };
+
+  const handleUpdateArtwork = (id: number, field: 'title' | 'description', value: string) => {
+    setArtworks(prev => prev.map(art => 
+      art.id === id ? { ...art, [field]: value } : art
+    ));
+  };
+
+  const selected = artworks.find(art => art.id === selectedArtwork);
+
   return <section id="galerie" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-12 text-center">
           Galerie
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {artworks.map(artwork => <Card key={artwork.id} className="group overflow-hidden border-border bg-card hover:bg-gallery-hover transition-all duration-300 cursor-pointer shadow-sm hover:shadow-elegant">
+          {artworks.map(artwork => (
+            <Card 
+              key={artwork.id} 
+              className="group overflow-hidden border-border bg-card hover:bg-gallery-hover transition-all duration-300 cursor-pointer shadow-sm hover:shadow-elegant"
+              onClick={() => handleArtworkClick(artwork.id)}
+            >
               <div className="aspect-[3/4] bg-muted flex items-center justify-center relative overflow-hidden">
                 <img src={artwork.image} alt={artwork.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
-                
-                
+                <h3 className="font-medium text-foreground">{artwork.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{artwork.description}</p>
               </div>
-            </Card>)}
+            </Card>
+          ))}
         </div>
+
+        <Dialog open={selectedArtwork !== null} onOpenChange={handleClose}>
+          <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 overflow-hidden">
+            {selected && (
+              <div className="flex flex-col md:flex-row h-full">
+                <div className="flex-1 relative bg-muted overflow-hidden flex items-center justify-center p-8">
+                  <div className="absolute top-4 right-4 z-10 flex gap-2">
+                    <Button size="icon" variant="secondary" onClick={handleZoomOut}>
+                      <ZoomOut className="h-4 w-4" />
+                    </Button>
+                    <Button size="icon" variant="secondary" onClick={handleZoomIn}>
+                      <ZoomIn className="h-4 w-4" />
+                    </Button>
+                  </div>
+                  <img 
+                    src={selected.image} 
+                    alt={selected.title} 
+                    className="max-w-full max-h-[80vh] object-contain transition-transform duration-200"
+                    style={{ transform: `scale(${zoom})` }}
+                  />
+                </div>
+                <div className="w-full md:w-96 p-6 bg-background overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle>Редактировать</DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-4 mt-4">
+                    <div>
+                      <Label htmlFor="title">Название</Label>
+                      <Input
+                        id="title"
+                        value={selected.title}
+                        onChange={(e) => handleUpdateArtwork(selected.id, 'title', e.target.value)}
+                        className="mt-1"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="description">Описание</Label>
+                      <Textarea
+                        id="description"
+                        value={selected.description}
+                        onChange={(e) => handleUpdateArtwork(selected.id, 'description', e.target.value)}
+                        className="mt-1 min-h-[200px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>;
 };
