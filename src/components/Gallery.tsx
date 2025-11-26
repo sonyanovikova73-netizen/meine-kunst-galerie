@@ -16,24 +16,87 @@ import artwork14 from "@/assets/artwork-14.jpg";
 import artwork15 from "@/assets/artwork-15.jpg";
 import artwork16 from "@/assets/artwork-16.jpg";
 const Gallery = () => {
-  const artworks = [
-    { id: 1, title: "Kunstwerk 1", description: "Beschreibung für Kunstwerk 1", image: artwork1 },
-    { id: 2, title: "Kunstwerk 2", description: "Beschreibung für Kunstwerk 2", image: artwork2 },
-    { id: 3, title: "Kunstwerk 3", description: "Beschreibung für Kunstwerk 3", image: artwork3 },
-    { id: 4, title: "Kunstwerk 4", description: "Beschreibung für Kunstwerk 4", image: artwork4 },
-    { id: 5, title: "Kunstwerk 5", description: "Beschreibung für Kunstwerk 5", image: artwork5 },
-    { id: 6, title: "Kunstwerk 6", description: "Beschreibung für Kunstwerk 6", image: artwork6 },
-    { id: 7, title: "Kunstwerk 7", description: "Beschreibung für Kunstwerk 7", image: artwork7 },
-    { id: 8, title: "Kunstwerk 8", description: "Beschreibung für Kunstwerk 8", image: artwork8 },
-    { id: 9, title: "Kunstwerk 9", description: "Beschreibung für Kunstwerk 9", image: artwork9 },
-    { id: 10, title: "Kunstwerk 10", description: "Beschreibung für Kunstwerk 10", image: artwork10 },
-    { id: 11, title: "Kunstwerk 11", description: "Beschreibung für Kunstwerk 11", image: artwork11 },
-    { id: 12, title: "Kunstwerk 12", description: "Beschreibung für Kunstwerk 12", image: artwork12 },
-    { id: 13, title: "Kunstwerk 13", description: "Beschreibung für Kunstwerk 13", image: artwork13 },
-    { id: 14, title: "Kunstwerk 14", description: "Beschreibung für Kunstwerk 14", image: artwork14 },
-    { id: 15, title: "Kunstwerk 15", description: "Beschreibung für Kunstwerk 15", image: artwork15 },
-    { id: 16, title: "Kunstwerk 16", description: "Beschreibung für Kunstwerk 16", image: artwork16 },
-  ];
+  const artworks = [{
+    id: 1,
+    title: "Kunstwerk 1",
+    description: "Beschreibung für Kunstwerk 1",
+    image: artwork1
+  }, {
+    id: 2,
+    title: "Kunstwerk 2",
+    description: "Beschreibung für Kunstwerk 2",
+    image: artwork2
+  }, {
+    id: 3,
+    title: "Kunstwerk 3",
+    description: "Beschreibung für Kunstwerk 3",
+    image: artwork3
+  }, {
+    id: 4,
+    title: "Kunstwerk 4",
+    description: "Beschreibung für Kunstwerk 4",
+    image: artwork4
+  }, {
+    id: 5,
+    title: "Kunstwerk 5",
+    description: "Beschreibung für Kunstwerk 5",
+    image: artwork5
+  }, {
+    id: 6,
+    title: "Kunstwerk 6",
+    description: "Beschreibung für Kunstwerk 6",
+    image: artwork6
+  }, {
+    id: 7,
+    title: "Kunstwerk 7",
+    description: "Beschreibung für Kunstwerk 7",
+    image: artwork7
+  }, {
+    id: 8,
+    title: "Kunstwerk 8",
+    description: "Beschreibung für Kunstwerk 8",
+    image: artwork8
+  }, {
+    id: 9,
+    title: "Kunstwerk 9",
+    description: "Beschreibung für Kunstwerk 9",
+    image: artwork9
+  }, {
+    id: 10,
+    title: "Kunstwerk 10",
+    description: "Beschreibung für Kunstwerk 10",
+    image: artwork10
+  }, {
+    id: 11,
+    title: "Kunstwerk 11",
+    description: "Beschreibung für Kunstwerk 11",
+    image: artwork11
+  }, {
+    id: 12,
+    title: "Kunstwerk 12",
+    description: "Beschreibung für Kunstwerk 12",
+    image: artwork12
+  }, {
+    id: 13,
+    title: "Kunstwerk 13",
+    description: "Beschreibung für Kunstwerk 13",
+    image: artwork13
+  }, {
+    id: 14,
+    title: "Kunstwerk 14",
+    description: "Beschreibung für Kunstwerk 14",
+    image: artwork14
+  }, {
+    id: 15,
+    title: "Kunstwerk 15",
+    description: "Beschreibung für Kunstwerk 15",
+    image: artwork15
+  }, {
+    id: 16,
+    title: "Kunstwerk 16",
+    description: "Beschreibung für Kunstwerk 16",
+    image: artwork16
+  }];
   return <section id="galerie" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-12 text-center">
@@ -45,12 +108,8 @@ const Gallery = () => {
                 <img src={artwork.image} alt={artwork.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
-                <h3 className="text-sm font-light text-foreground">
-                  {artwork.title}
-                </h3>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {artwork.description}
-                </p>
+                
+                
               </div>
             </Card>)}
         </div>
