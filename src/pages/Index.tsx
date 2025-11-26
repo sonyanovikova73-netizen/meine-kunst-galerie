@@ -1,17 +1,19 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import Gallery from "@/components/Gallery";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import Gallery from '@/components/Gallery';
+import About from '@/components/About';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 const Index = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
-      <Gallery />
       <About />
+      <Gallery />
       <Contact />
       <Footer />
-    </div>;
+    </div>
+  );
 };
 export default Index;
