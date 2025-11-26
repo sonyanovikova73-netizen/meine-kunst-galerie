@@ -1,5 +1,14 @@
 import { Card } from "@/components/ui/card";
 import artwork1 from "@/assets/artwork-1.jpg";
+import artwork2 from "@/assets/artwork-2.jpg";
+import artwork3 from "@/assets/artwork-3.jpg";
+import artwork4 from "@/assets/artwork-4.jpg";
+import artwork5 from "@/assets/artwork-5.jpg";
+import artwork6 from "@/assets/artwork-6.jpg";
+import artwork7 from "@/assets/artwork-7.jpg";
+import artwork8 from "@/assets/artwork-8.jpg";
+import artwork9 from "@/assets/artwork-9.jpg";
+import artwork10 from "@/assets/artwork-10.jpg";
 
 const Gallery = () => {
   // Generate 20 placeholder items
@@ -7,6 +16,11 @@ const Gallery = () => {
     id: i + 1,
     title: `Kunstwerk ${i + 1}`,
   }));
+
+  const artworkImages = [
+    artwork1, artwork2, artwork3, artwork4, artwork5,
+    artwork6, artwork7, artwork8, artwork9, artwork10
+  ];
 
   return (
     <section id="galerie" className="py-20 px-6">
@@ -21,9 +35,9 @@ const Gallery = () => {
               className="group overflow-hidden border-border bg-card hover:bg-gallery-hover transition-all duration-300 cursor-pointer shadow-sm hover:shadow-elegant"
             >
               <div className="aspect-[3/4] bg-muted flex items-center justify-center relative overflow-hidden">
-                {artwork.id === 1 ? (
+                {artwork.id <= 10 ? (
                   <img 
-                    src={artwork1} 
+                    src={artworkImages[artwork.id - 1]} 
                     alt={artwork.title}
                     className="w-full h-full object-cover"
                   />
