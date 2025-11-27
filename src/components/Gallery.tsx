@@ -33,99 +33,122 @@ const Gallery = () => {
   const [artworks, setArtworks] = useState([
     {
       id: 1,
-      title: 'hghg',
-      description:
-        'Bla bla bla. Sonja ist eine schöne Frau. Ich bin ein Mann. Wir sind zusammen. Wir sind glücklich. Wir sind in der Liebe. Ich möchte sie ficken.',
+      title: 'Gesundheit und gesundes Leben',
+      description: (
+        <>
+          Dieses Bild habe ich in der Schule im Kunstunterricht zum Thema
+          <br />
+          <b>"Gesundheit und gesundes Leben"</b>
+          gemalt. Ich wollte dabei das Thema Drogenkonsum aufgreifen, da dies
+          leider ein weit verbreitetes Problem unter Jugendlichen ist.
+        </>
+      ),
       image: artwork1,
     },
     {
       id: 2,
-      title: 'Kunstwerk 2',
-      description: 'Beschreibung für Kunstwerk 2',
+      title: 'Dunkle Wogen',
+      description:
+        'Die dunklen Farben des Meeres wirken sehr geheimnisvoll. Die Wellen zeigen die unaufhaltsame Kraft der Natur. Es ist eine stimmungsvolle Szene, die zum Nachdenken anregt.',
       image: artwork2,
     },
     {
       id: 3,
-      title: 'Kunstwerk 3',
-      description: 'Beschreibung für Kunstwerk 3',
+      title: 'Das leuchtende Herz',
+      description:
+        'Das Herz wird durch die starken Farben sehr intensiv dargestellt. Die Farben sollen die Energie und die starken Gefühle zeigen, die wir in uns tragen.',
       image: artwork3,
     },
     {
       id: 4,
-      title: 'Kunstwerk 4',
-      description: 'Beschreibung für Kunstwerk 4',
+      title: 'Sonniger Nachmittag',
+      description:
+        'Dieses Bild vermittelt sofort ein Gefühl von Sommer und Leichtigkeit. Ich wollte die Freude und die Lebendigkeit eines sonnigen Tages durch die frischen Farben darstellen.',
       image: artwork4,
     },
     {
       id: 5,
-      title: 'Kunstwerk 5',
-      description: 'Beschreibung für Kunstwerk 5',
+      title: 'Zarte Pfingstrosen',
+      description:
+        'Die rosa Pfingstrosen strahlen Zärtlichkeit und Schönheit aus. Beim Malen dieser Blumen spürte ich Ruhe und wollte dieses Gefühl der Eleganz festhalten. Die Farben sind sanft und beruhigend.',
       image: artwork5,
     },
     {
       id: 6,
-      title: 'Kunstwerk 6',
-      description: 'Beschreibung für Kunstwerk 6',
+      title: 'Der Gentleman',
+      description:
+        'Dieses lustige Porträt soll den Betrachter sofort zum Lächeln bringen. Ich mag es, wenn Kunst überraschend ist und Freude auslöst. Der Frosch wirkt sehr selbstbewusst und elegant.',
       image: artwork6,
     },
     {
       id: 7,
-      title: 'Kunstwerk 7',
-      description: 'Beschreibung für Kunstwerk 7',
+      title: 'Vorstadt-Romantik',
+      description:
+        'Die Farben des Himmels sind so stark und beruhigend, dass man die Hektik des Tages vergisst. Ich wollte die melancholische Schönheit einfangen, die man oft an solchen gewöhnlichen Orten findet.',
       image: artwork7,
     },
+
     {
       id: 8,
-      title: 'Kunstwerk 8',
-      description: 'Beschreibung für Kunstwerk 8',
+      title: 'Goldene Stunde am Meer ',
+      description:
+        'Ich habe versucht, die besondere Magie der goldenen Stunde einzufangen. Die Ruhe und das warme Licht geben mir ein Gefühl von Frieden und Dankbarkeit. Es ist ein Moment zum Entspannen.',
       image: artwork8,
     },
     {
       id: 9,
-      title: 'Kunstwerk 9',
-      description: 'Beschreibung für Kunstwerk 9',
+      title: 'Licht im Sturm',
+      description:
+        'Das ist ein sehr starkes und dramatisches Bild. Es geht um innere Stärke und die Hoffnung, die bleibt, auch wenn das Leben wie ein Sturm ist. Der Leuchtturm symbolisiert für mich den sicheren Weg.',
       image: artwork9,
     },
     {
       id: 10,
-      title: 'Kunstwerk 10',
-      description: 'Beschreibung für Kunstwerk 10',
+      title: 'Gemütlichkeit am Fenster',
+      description:
+        'Dieses Bild war ein Geburtstagsgeschenk für meine gute Freundin. Es zeigt ihre geliebte Katze, wie sie gemütlich am Fensterbrett liegt und die Welt draußen beobachtet. Ich wollte ihre spezielle Verbindung zu ihrem Haustier und die Ruhe dieses Moments einfangen und ihr damit eine Freude machen.',
       image: artwork10,
     },
     {
       id: 11,
-      title: 'Kunstwerk 11',
-      description: 'Beschreibung für Kunstwerk 11',
+      title: 'Mediterraner Genuss',
+      description:
+        'Dieses Stillleben lässt mich sofort an einen warmen Urlaubstag denken. Ich wollte die entspannte Atmosphäre und das Gefühl von Leichtigkeit einfangen, das man bei einem Glas Wein und Trauben auf einer Terrasse spürt.',
       image: artwork11,
     },
     {
       id: 12,
-      title: 'Kunstwerk 12',
-      description: 'Beschreibung für Kunstwerk 12',
+      title: 'Eierblumen',
+      description:
+        'Dieses Bild ist sehr lustig und ungewöhnlich. Es soll zeigen, wie man aus Alltäglichem etwas Verrücktes und Kreatives machen kann. Die Eier als Blumen und das kleine Küken wecken Neugier und bringen eine spielerische Stimmung.',
       image: artwork12,
     },
     {
       id: 13,
-      title: 'Kunstwerk 13',
-      description: 'Beschreibung für Kunstwerk 13',
+      title: 'Das Märchenpaar',
+      description:
+        'Die beiden Figuren sehen aus wie aus einem alten Märchen. Ich wollte die Romantik und die ein bisschen traurige oder nachdenkliche Stimmung einer alten Geschichte einfangen.',
       image: artwork13,
     },
     {
       id: 14,
-      title: 'Kunstwerk 14',
-      description: 'Beschreibung für Kunstwerk 14',
+      title: 'Heimat im Licht ',
+      description:
+        'Dieses Bild ist eine Hommage an meine ukrainische Heimat. Es erinnert mich an die Weite der Landschaft und die tiefe Ruhe der Dörfer. Der große, weite Himmel symbolisiert das Gefühl von Freiheit und die starke Seele meines Landes.',
       image: artwork14,
     },
     {
       id: 15,
-      title: 'Kunstwerk 15',
-      description: 'Beschreibung für Kunstwerk 15',
+      title: 'Sommertag im Gasthof ',
+      description:
+        'Dieses Bild habe ich als Auftragsarbeit für meinen ehemaligen Chef gemalt und an ihn verkauft. Es hängt jetzt in seinem Hotel-Restaurant und fängt die fröhliche und einladende Atmosphäre eines Sommertages perfekt ein. Ich bin sehr stolz darauf, dass es dort die Gäste begrüßt.',
       image: artwork15,
     },
     {
       id: 16,
-      title: 'Kunstwerk 16',
-      description: 'Beschreibung für Kunstwerk 16',
+      title: 'Beste Freunde',
+      description:
+        'Das Bild zeigt drei Freunde, die zusammen den Sonnenuntergang genießen. Ich wollte damit zeigen, wie wichtig Freundschaft ist und wie ruhig und sicher man sich dabei fühlt.',
       image: artwork16,
     },
   ]);
